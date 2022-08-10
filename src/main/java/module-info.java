@@ -1,9 +1,10 @@
-module com.dx.dxjavafx {
+module com.dx {
     requires javafx.controls;
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.dx to javafx.fxml;
     exports com.dx;
+    exports com.dx.controller;
+    opens com.dx.controller to javafx.fxml;
 }
