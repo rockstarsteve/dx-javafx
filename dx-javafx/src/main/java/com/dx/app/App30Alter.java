@@ -18,11 +18,8 @@ public class App30Alter extends Application {
     @Override
     public void start(Stage primaryStage) {
         /**
-         * 按钮
+         * 弹框的实现
          */
-//        VBox root = new VBox();
-//        Label label = new Label("这个是主页面的内容");
-
         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setHeight(100);
         errorAlert.setTitle("头");
@@ -31,13 +28,6 @@ public class App30Alter extends Application {
         primaryStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
         primaryStage.getIcons().add(new Image(App30Alter.class.getResourceAsStream("/images/icon.png")));
         errorAlert.show();
-
-//        root.getChildren().add(label);
-//
-//        Scene scene = new Scene(root, 600, 600);
-//        primaryStage.setScene(scene);
-//        primaryStage.setTitle("窗口");
-//        primaryStage.show();
     }
 
     public static void main(String[] args) {

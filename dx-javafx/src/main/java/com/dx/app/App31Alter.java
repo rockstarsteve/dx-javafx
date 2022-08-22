@@ -14,6 +14,12 @@ import javafx.stage.Stage;
  */
 public class App31Alter extends Application {
 
+    /**
+     * 所有的弹框
+     *
+     * @param primaryStage
+     */
+
     @Override
     public void start(Stage primaryStage) {
 //        AlertUtil.buildErrorAlert("头1", "我是内容");
@@ -24,8 +30,6 @@ public class App31Alter extends Application {
 //        AlertUtil.buildWarnAlert("头6", "我是内容").show();
 //        AlertUtil.buildSubmitSuccessInfoAlert();
         AlertUtil.buildSubmitErrorInfoAlert();
-
-
     }
 
     public static void main(String[] args) {

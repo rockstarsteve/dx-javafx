@@ -3,6 +3,7 @@ module com.dx {
     requires javafx.fxml;
 
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     //fxml的路径
     exports com.dx.app;
