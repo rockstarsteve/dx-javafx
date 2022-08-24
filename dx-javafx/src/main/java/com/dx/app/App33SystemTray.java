@@ -142,7 +142,7 @@ public class App33SystemTray extends Application {
     private MenuItem exitMenuItem(SystemTray systemTray, TrayIcon newTrayIcon) {
         //退出菜单
         MenuItem exitMenuItem = new MenuItem("exit退出");
-        exitMenuItem.setFont(new Font("微软雅黑", 20, 20));
+//        exitMenuItem.setFont(new Font("微软雅黑", 20, 20));
         exitMenuItem.addActionListener(exitEvent ->
                 Platform.runLater(() -> {
                     Alert confirmAlert = AlertUtil.buildConfirmAlert("提示", "是否退出节点程序");

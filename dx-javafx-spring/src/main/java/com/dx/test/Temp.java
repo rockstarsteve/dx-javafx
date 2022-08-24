@@ -1,5 +1,7 @@
 package com.dx.test;
 
+import java.awt.*;
+
 /**
  * Description:
  *
@@ -20,6 +22,8 @@ public class Temp {
         String property = System.getProperty("java.awt.headless");
         System.out.println(property);
         System.out.println("设置后property:" + property);
+
+        System.out.println("SystemTray.isSupported():" + SystemTray.isSupported());
 
     }
 

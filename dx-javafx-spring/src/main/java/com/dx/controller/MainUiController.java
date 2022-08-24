@@ -14,11 +14,16 @@ import javafx.scene.layout.BorderPane;
  */
 public class MainUiController {
 
-
+    /**
+     * 生成主页的内容
+     *
+     * @return
+     */
     public static Parent load() {
         BorderPane root = new BorderPane();
         Label label = new Label("这个是主页面的内容");
         root.setTop(label);
         return root;
     }
+
 }

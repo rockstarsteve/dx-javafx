@@ -2,6 +2,7 @@ package com.dx.app;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -19,10 +20,11 @@ public class App10TextField extends Application {
     @Override
     public void start(Stage primaryStage) {
         /**
-         * 按钮
+         * 输入框
          */
         VBox root = new VBox();
 
+        PasswordField passwordField = new PasswordField();
         TextField textField = new TextField("内容");
         root.getChildren().add(textField);
 

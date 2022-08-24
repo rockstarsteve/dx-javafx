@@ -37,13 +37,11 @@ public class ConfigSettingMainUiController {
 
         // 设置界面 移动事件
         scene.setOnMousePressed(event -> {
-            log.info("settingScene.setOnMousePressed移动了。。。。。。。。。");
             xOffset = event.getSceneX();
             yOffset = event.getSceneY();
         });
         //窗体的移动事件处理
         root.setOnMouseDragged(event -> {
-            log.info("root.setOnMouseDragged移动了。。。。。。");
             settingStage.setX(event.getScreenX() - xOffset);
             settingStage.setY(event.getScreenY() - yOffset);
         });

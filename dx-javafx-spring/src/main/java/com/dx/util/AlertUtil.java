@@ -1,6 +1,5 @@
 package com.dx.util;
 
-import com.dx.app.AppPlatform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
@@ -83,7 +82,7 @@ public class AlertUtil {
     private static void check(Alert alert) {
         alert.getDialogPane().setStyle("-fx-font-size: 16");
         stage = (Stage) alert.getDialogPane().getScene().getWindow();
-        stage.getIcons().add(new Image(AppPlatform.class.getResourceAsStream("/images/icon.png")));
+        stage.getIcons().add(new Image(AlertUtil.class.getResourceAsStream("/images/icon.png")));
     }
 
 

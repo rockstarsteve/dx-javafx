@@ -1,0 +1,30 @@
+#loginForm {
+    /*-fx-background-color: green;*/
+    -fx-padding: 30 0 0 0;
+}
+
+
+#usernameBox {
+    -fx-background-color: green;
+    -fx-alignment: center;
+    -fx-spacing: 50;
+    /*-fx-background-insets: 50;*/
+    -fx-border-insets: 50;
+}
+
+#passwordBox {
+    -fx-background-color: yellow;
+    -fx-alignment: center;
+    -fx-spacing: 50;
+}
+
+#btnBox {
+    -fx-background-color: pink;
+    -fx-alignment: center;
+    -fx-spacing: 50;
+}
+
+#copyBox {
+    -fx-background-color: white;
+    -fx-alignment: center;
+}

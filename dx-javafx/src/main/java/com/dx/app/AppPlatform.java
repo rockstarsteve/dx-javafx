@@ -17,7 +17,7 @@ import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class AppCode extends Application {
+public class AppPlatform extends Application {
 
     public static boolean mouseMovedFlag = false;
 
@@ -49,7 +49,7 @@ public class AppCode extends Application {
         Scene scene = new Scene(root, 320, 240);
         stage.setScene(scene);
         //图标
-        stage.getIcons().add(new Image(AppCode.class.getResourceAsStream("/images/icon.png")));
+        stage.getIcons().add(new Image(AppPlatform.class.getResourceAsStream("/images/icon.png")));
         //是否可以改变窗体大小
         stage.setResizable(false);
         stage.show();
