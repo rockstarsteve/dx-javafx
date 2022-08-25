@@ -1,16 +1,13 @@
 package com.dx.app;
 
-import javafx.animation.RotateTransition;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.PhongMaterial;
-import javafx.scene.shape.Cylinder;
-import javafx.scene.transform.Rotate;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 /**
  * Description:
@@ -24,32 +21,30 @@ public class App39AnchorPane extends Application {
 
     @Override
     public void start(Stage stage) {
-        Cylinder cylinder = new Cylinder();
-        cylinder.setHeight(180.0f);
-        cylinder.setRadius(100.0f);
-        PhongMaterial material = new PhongMaterial();
-        material.setDiffuseColor(Color.BLANCHEDALMOND);
-        cylinder.setMaterial(material);
-        RotateTransition rotateTransition = new RotateTransition();
-        rotateTransition.setDuration(Duration.millis(1000));
-        rotateTransition.setNode(cylinder);
-        rotateTransition.setAxis(Rotate.X_AXIS);
-        rotateTransition.setByAngle(360);
-        rotateTransition.setCycleCount(RotateTransition.INDEFINITE);
-        rotateTransition.setAutoReverse(false);
-        rotateTransition.play();
+        Text text1 = new Text("我是第一个文字");
+        text1.setFont(new Font(15));
+        text1.setFill(Color.DARKSLATEBLUE);
+
+        Text text2 = new Text("我是第二段话");
+        text2.setFont(new Font(15));
+        text2.setFill(Color.DARKGOLDENROD);
 
         AnchorPane anchorPane = new AnchorPane();
 
-        AnchorPane.setTopAnchor(cylinder, 50.0);
-        AnchorPane.setLeftAnchor(cylinder, 50.0);
-        AnchorPane.setRightAnchor(cylinder, 50.0);
-        AnchorPane.setBottomAnchor(cylinder, 50.0);
+        AnchorPane.setTopAnchor(text1, 0.0);
+        AnchorPane.setLeftAnchor(text1, 0.0);
+//        AnchorPane.setRightAnchor(text1, 0.0);
+//        AnchorPane.setBottomAnchor(text1, 0.0);
+
+//        AnchorPane.setTopAnchor(text2, 10.0);
+//        AnchorPane.setLeftAnchor(text2, 0.0);
+        AnchorPane.setRightAnchor(text2, 0.0);
+        AnchorPane.setBottomAnchor(text2, 0.0);
 
         ObservableList list = anchorPane.getChildren();
-        list.addAll(cylinder);
+        list.addAll(text1, text2);
 
-        Scene scene = new Scene(anchorPane);
+        Scene scene = new Scene(anchorPane, 600, 600);
         stage.setTitle("Anchor Pane Example");
         stage.setScene(scene);
         stage.show();

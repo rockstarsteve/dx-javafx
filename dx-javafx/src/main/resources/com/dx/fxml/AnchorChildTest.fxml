@@ -2,30 +2,23 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.PasswordField?>
-<VBox fx:id="loginForm" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.controller.LoginTestController">
+<VBox fx:id="loginForm" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.controller.AnchorChildTestController">
 
-    <HBox fx:id="usernameBox">
-        <Label text="用户名：" fx:id="usernametxt"/>
+    <children>
+        <Label text="用户名：" fx:id="usertxt"/>
         <TextField fx:id="usernameInput"></TextField>
-    </HBox>
 
-    <HBox fx:id="passwordBox">
         <Label text="密码：" fx:id="passwordtxt"/>
         <PasswordField fx:id="passwordInput"></PasswordField>
-    </HBox>
 
-    <HBox fx:id="btnBox">
         <Button text="登录" fx:id="loginBtn" onAction="#loginBtn"></Button>
         <Button text="取消" fx:id="cancleBtn" onAction="#cancleBtn"></Button>
-    </HBox>
 
-    <HBox fx:id="copyBox">
-        <Text text="版权所属©：电信班"></Text>
-    </HBox>
+        <Text text="版权所属©：电信班" fx:id="copyTxt"></Text>
+    </children>
 
 </VBox>

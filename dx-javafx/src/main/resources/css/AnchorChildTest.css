@@ -1,0 +1,41 @@
+#loginForm {
+    -fx-padding: 30 0 0 0;
+}
+
+
+#usertxt {
+    -fx-translate-x: 200;
+    -fx-translate-y: 70;
+}
+
+#usernameInput {
+    -fx-max-width: 150;
+    -fx-translate-x: 250;
+    -fx-translate-y: 50;
+}
+
+#passwordtxt {
+    -fx-translate-x: 200;
+    -fx-translate-y: 80;
+}
+
+#passwordInput {
+    -fx-max-width: 150;
+    -fx-translate-x: 250;
+    -fx-translate-y: 60;
+}
+
+#loginBtn {
+    -fx-translate-x: 250;
+    -fx-translate-y: 90;
+}
+
+#cancleBtn {
+    -fx-translate-x: 300;
+    -fx-translate-y: 70;
+}
+
+#copyTxt {
+    -fx-translate-x: 250;
+    -fx-translate-y: 100;
+}

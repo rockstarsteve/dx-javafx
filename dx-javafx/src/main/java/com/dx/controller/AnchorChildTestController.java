@@ -2,9 +2,9 @@ package com.dx.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
 
 /**
  * Description:
@@ -14,16 +14,12 @@ import javafx.scene.layout.HBox;
  * @copyright Copyright (c) 电信
  * @since 2022/8/13
  */
-public class LoginTestController {
+public class AnchorChildTestController {
 
     @FXML
-    private HBox usernameBox;
+    private Label usertxt;
     @FXML
-    private HBox passwordBox;
-    @FXML
-    private HBox btnBox;
-    @FXML
-    private HBox copyBox;
+    private Label passwordtxt;
     @FXML
     private TextField usernameInput;
     @FXML

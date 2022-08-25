@@ -34,6 +34,7 @@ public class App41GridPane extends Application {
 
         //Creating a Grid Pane
         GridPane gridPane = new GridPane();
+        gridPane.setAlignment(Pos.CENTER_RIGHT);
 //        gridPane.setStyle("-fx-background-color: red;");
         gridPane.setMinSize(400, 200);
         gridPane.setPadding(new Insets(15, 10, 15, 10));

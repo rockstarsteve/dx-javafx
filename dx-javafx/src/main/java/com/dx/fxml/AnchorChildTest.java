@@ -15,15 +15,16 @@ import java.io.IOException;
  * @copyright Copyright (c) 电信
  * @since 2022/8/24
  */
-public class LoginTest extends Application {
+public class AnchorChildTest extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App04Lable.class.getResource("loginTest.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-        scene.getStylesheets().add(getClass().getResource("/css/loginTest.css").toExternalForm());
+        FXMLLoader fxmlLoader = new FXMLLoader(App04Lable.class.getResource("AnchorChildTest.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        scene.getStylesheets().add(getClass().getResource("/css/AnchorChildTest.css").toExternalForm());
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("登录");
         primaryStage.show();
     }
 
