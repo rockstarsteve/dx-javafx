@@ -28,4 +28,9 @@
         <Text text="版权所属©：电信班"></Text>
     </HBox>
 
+    <HBox fx:id="showToken">
+            <Text text="token:"></Text>
+            <Text text="" fx:id="texttoken"></Text>
+        </HBox>
+
 </VBox>

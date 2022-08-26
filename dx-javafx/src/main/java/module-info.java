@@ -10,6 +10,8 @@ module com.dx {
     requires lombok;
     requires org.slf4j;
 
+    //导出bean
+    exports com.dx.bean;
     //fxml的路径
     exports com.dx.app;
     exports com.dx.fxml;

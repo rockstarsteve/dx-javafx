@@ -40,3 +40,7 @@
 #copyBox {
     -fx-alignment: center;
 }
+
+#showToken{
+    -fx-alignment: center;
+}
