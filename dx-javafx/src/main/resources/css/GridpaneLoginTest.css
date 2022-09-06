@@ -1,0 +1,38 @@
+.main{
+    -fx-background-color: pink;
+}
+
+.tabletitle{
+    /*-fx-halignment: center;*/
+    /*-fx-alignment: center;*/
+}
+
+.username{
+    -fx-pref-width: 200;
+    -fx-pref-height: 50;
+    -fx-background-color: yellow;
+    -fx-alignment: center-right;
+    -fx-padding: 5;
+}
+
+.usernameInput{
+
+}
+
+.password{
+    -fx-pref-width: 100;
+    -fx-background-color: green;
+    -fx-alignment: center;
+}
+
+.passwordInput{
+
+}
+
+.btn{
+    -fx-background-color: green;
+}
+
+.btn:pressed{
+    -fx-opacity: 0.8;
+}

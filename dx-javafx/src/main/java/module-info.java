@@ -9,6 +9,13 @@ module com.dx {
     requires okhttp3;
     requires lombok;
     requires org.slf4j;
+    requires org.pomo.toasterfx;
+
+    requires javafx.base;
+    requires javafx.graphics;
+//    requires javafx.media;
+//    requires javafx.web;
+
 
     //导出bean
     exports com.dx.bean;
@@ -18,3 +25,5 @@ module com.dx {
     //fxml对应处理类的路径
     opens com.dx.controller to javafx.fxml;
 }
+
+

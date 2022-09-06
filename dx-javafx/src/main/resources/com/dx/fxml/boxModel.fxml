@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<TilePane styleClass="main" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.fxml.textLineCenter">
+
+        <VBox styleClass="box1"></VBox>
+        <VBox styleClass="box2"></VBox>
+        <Button styleClass="btn"></Button>
+
+</TilePane>

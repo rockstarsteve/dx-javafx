@@ -7,22 +7,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
 /**
  * Description:
  *
  * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 电信
- * @since 2022/8/10
+ * @since 2022/8/28
  */
-public class App05Button extends Application {
+public class textLineCenterTest extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App05Button.class.getResource("/com/dx/fxml/buttom.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 700, 700);
-        scene.getStylesheets().add(getClass().getResource("/css/common.css").toExternalForm());
+        FXMLLoader fxmlLoader = new FXMLLoader(textLineCenterTest.class.getResource("/com/dx/fxml/textLineCenter.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("/css/textLineCenter.css").toExternalForm());
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -30,4 +30,5 @@ public class App05Button extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }

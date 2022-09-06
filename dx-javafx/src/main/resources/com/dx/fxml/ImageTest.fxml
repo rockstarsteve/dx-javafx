@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<TilePane styleClass="main" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.fxml.BoxModelTest">
+
+    <VBox styleClass="box1"></VBox>
+    <Button prefHeight="200" prefWidth="200" style="-fx-background-color: #fff;-fx-padding: 0;-fx-background-insets: 0">
+        <graphic>
+            <ImageView styleClass="images-container" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../images/icon.png"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+</TilePane>

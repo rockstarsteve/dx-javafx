@@ -25,6 +25,7 @@
 #passwordtxt {
     -fx-translate-x: 190;
     -fx-translate-y: 0;
+    -fx-font-size: 30;
 }
 
 #passwordInput {
@@ -43,4 +44,10 @@
 
 #showToken{
     -fx-alignment: center;
+}
+
+#loginBtn{
+    -fx-font-size: 30;
+    -fx-background-color: pink;
+    -fx-text-fill: green;
 }

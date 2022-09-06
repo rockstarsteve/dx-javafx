@@ -16,3 +16,7 @@
     -fx-border-width: 2px;
     -fx-border-color: #000000;
 }
+
+#btn:hover{
+    -fx-cursor: hand;
+}

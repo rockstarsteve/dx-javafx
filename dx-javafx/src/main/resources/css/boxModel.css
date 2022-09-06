@@ -1,0 +1,27 @@
+.main {
+    -fx-pref-width: 700;
+    -fx-pref-height: 700;
+    -fx-background-color: #f5f0f0;
+}
+
+.box1{
+    -fx-background-color: blue;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+}
+
+.box2{
+    -fx-background-color: pink;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+    -fx-border-width: 20;
+    -fx-border-color: green;
+
+}
+
+.btn{
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+    -fx-background-color: red;
+    -fx-background-image: url('../images/icon.png');
+}
