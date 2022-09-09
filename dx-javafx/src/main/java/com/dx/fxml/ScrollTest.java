@@ -13,13 +13,13 @@ import java.io.IOException;
  * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 电信
- * @since 2022/8/24
+ * @since 2022/9/6
  */
-public class GridpaneLoginTest extends Application {
+public class ScrollTest extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/GridpaneLoginTest.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/ScrollTest.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
@@ -29,5 +29,4 @@ public class GridpaneLoginTest extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

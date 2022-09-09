@@ -38,7 +38,7 @@ public class MessageUtils {
     public static void info(Pane container, String message, Integer fadeInDelay, Integer fadeOutDelay, EventHandler<ActionEvent> finishedEvent){
         try {
             /*default value*/
-            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/com/dx/fxml/message-info.fxml");
+            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/fxml/message-info.fxml");
         } catch (IOException e) {
             e.printStackTrace();
             log.error("MessageUtils info load fxml error: {}", e.toString());
@@ -48,7 +48,7 @@ public class MessageUtils {
     public static void success(Pane container, String message, Integer fadeInDelay, Integer fadeOutDelay, EventHandler<ActionEvent> finishedEvent){
         try {
             /*default value*/
-            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/com/dx/fxml/message-success.fxml");
+            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/fxml/message-success.fxml");
         } catch (IOException e) {
             e.printStackTrace();
             log.error("MessageUtils info load fxml error: {}", e.toString());
@@ -59,7 +59,7 @@ public class MessageUtils {
     public static void warning(Pane container, String message, Integer fadeInDelay, Integer fadeOutDelay, EventHandler<ActionEvent> finishedEvent){
         try {
             /*default value*/
-            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/com/dx/fxml/message-warn.fxml");
+            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/fxml/message-warn.fxml");
         } catch (IOException e) {
             e.printStackTrace();
             log.error("MessageUtils info load fxml error: {}", e.toString());
@@ -68,7 +68,7 @@ public class MessageUtils {
 
     public static void error(Pane container, String message, Integer fadeInDelay, Integer fadeOutDelay, EventHandler<ActionEvent> finishedEvent){
         try {
-            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/com/dx/fxml/message-error.fxml");
+            loadMessage(container, message, fadeInDelay, fadeOutDelay, finishedEvent, "/fxml/message-error.fxml");
         } catch (IOException e) {
             e.printStackTrace();
             log.error("MessageUtils info load fxml error: {}", e.toString());

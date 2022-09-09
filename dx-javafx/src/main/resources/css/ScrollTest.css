@@ -1,0 +1,21 @@
+.main {
+    -fx-pref-width: 600;
+    -fx-pref-height: 600;
+
+}
+
+.box1 {
+    -fx-pref-width: 500;
+    -fx-pref-height: 500;
+    -fx-background-color: #00FF00;
+
+}
+
+.srcoll-box{
+    -fx-background-color: pink;
+}
+
+.scroll-box-content{
+    -fx-background-color: #007FE1;
+}
+

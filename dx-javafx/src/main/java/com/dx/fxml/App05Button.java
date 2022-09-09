@@ -20,7 +20,7 @@ public class App05Button extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App05Button.class.getResource("/com/dx/fxml/buttom.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App05Button.class.getResource("/fxml/Buttom.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 700);
         scene.getStylesheets().add(getClass().getResource("/css/common.css").toExternalForm());
         primaryStage.setScene(scene);

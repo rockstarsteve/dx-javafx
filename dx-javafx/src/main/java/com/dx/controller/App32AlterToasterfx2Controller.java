@@ -49,7 +49,7 @@ public class App32AlterToasterfx2Controller implements Initializable {
 
     public void onClick(ActionEvent event) {
         String text = title.getText();
-        System.out.println("处理的消息时间是text:"+text);
+        System.out.println("处理的消息时间是text处理的消息时间是text处理的消息时间是text处理的消息时间是text:"+text);
 
         System.out.println("点击了当前的东西，需要关闭。。。");
 //        this.onAction.accept(event);
@@ -58,6 +58,6 @@ public class App32AlterToasterfx2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        title.setText("测试随的内容" + new Date());
+        title.setText("处理的消息时间是text处理的消息时间是text处理的消息时间是text处理的消息时间是" + new Date());
     }
 }

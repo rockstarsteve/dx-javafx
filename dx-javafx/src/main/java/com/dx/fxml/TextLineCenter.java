@@ -9,18 +9,19 @@ import java.io.IOException;
 
 /**
  * Description:
+ * 多行文字
  *
  * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 电信
- * @since 2022/8/24
+ * @since 2022/8/28
  */
-public class GridpaneLoginTest extends Application {
+public class TextLineCenter extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/GridpaneLoginTest.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        FXMLLoader fxmlLoader = new FXMLLoader(TextLineCenter.class.getResource("/fxml/TextLineCenter.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

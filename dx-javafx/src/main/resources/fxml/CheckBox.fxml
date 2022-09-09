@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.CheckBox?>
+<VBox fx:id="container" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.controller.ButtonController"
+      stylesheets="@../css/CheckBox.css">
+
+    <CheckBox>不知道写什么</CheckBox>
+
+</VBox>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<FlowPane xmlns:fx="http://javafx.com/fxml" styleClass="main" fx:controller="com.dx.fxml.ToastFxTowCloseTest">
+
+    <children>
+        <Button onAction="#toastClick">弹窗</Button>
+        <Button onAction="#toastClickNew">重新弹新的一个窗</Button>
+        <Button onAction="#addNode">添加一个节点</Button>
+    </children>
+
+</FlowPane>
+

@@ -15,14 +15,15 @@ import java.io.IOException;
  * @copyright Copyright (c) 电信
  * @since 2022/8/24
  */
-public class GridpaneLoginTest extends Application {
+public class BorderPane extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/GridpaneLoginTest.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/BorderPane.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
+        primaryStage.setTitle("登录");
         primaryStage.show();
     }
 

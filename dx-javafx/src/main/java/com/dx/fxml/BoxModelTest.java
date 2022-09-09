@@ -17,18 +17,17 @@ import java.io.IOException;
  */
 public class BoxModelTest extends Application {
 
+    public static void main(String[] args) {
+        launch();
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(BoxModelTest.class.getResource("boxModel.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(BoxModelTest.class.getResource("/fxml/boxModel.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("/css/boxModel.css").toExternalForm());
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch();
     }
 
 }

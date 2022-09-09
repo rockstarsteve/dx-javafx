@@ -19,9 +19,8 @@ public class AnchorChildTest extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App04Lable.class.getResource("AnchorChildTest.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/AnchorChildTest.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        scene.getStylesheets().add(getClass().getResource("/css/AnchorChildTest.css").toExternalForm());
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.setTitle("登录");

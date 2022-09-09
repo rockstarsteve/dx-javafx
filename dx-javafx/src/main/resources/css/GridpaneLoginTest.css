@@ -10,6 +10,7 @@
 .username{
     -fx-pref-width: 200;
     -fx-pref-height: 50;
+    -fx-max-height: 52;
     -fx-background-color: yellow;
     -fx-alignment: center-right;
     -fx-padding: 5;

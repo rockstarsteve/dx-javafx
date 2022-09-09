@@ -1,0 +1,22 @@
+
+#container{
+
+}
+
+#myLabel {
+    -fx-background-color: #f59b9b;
+    -fx-border-color: #29e543;
+    -fx-start-margin: 100px;
+    -fx-font-size: 40px;
+}
+
+#box{
+    -fx-border-width: 100;
+    -fx-border-color: #00FF00;
+    -fx-border-width: 2px;
+    -fx-border-color: #000000;
+}
+
+#btn:hover{
+    -fx-cursor: hand;
+}

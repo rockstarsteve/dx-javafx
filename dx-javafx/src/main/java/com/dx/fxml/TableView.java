@@ -19,9 +19,8 @@ public class TableView extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App04Lable.class.getResource("/com/dx/fxml/TableView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Lable.class.getResource("/fxml/TableView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-        scene.getStylesheets().add(getClass().getResource("/css/TableView.css").toExternalForm());
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();

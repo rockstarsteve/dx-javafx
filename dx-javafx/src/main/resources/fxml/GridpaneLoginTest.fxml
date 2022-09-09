@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<VBox fx:id="loginForm" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.controller.GridpaneLoginTestController"
+      stylesheets="@../css/GridpaneLoginTest.css">
+
+    <GridPane styleClass="main" prefHeight="600" prefWidth="600">
+        <!-- 通过相关标签创建一个模拟登录的“用户名”和“密码”的组件 -->
+        <Text styleClass="tabletitle" text="Welcome" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label styleClass="username" text="用户名:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField styleClass="usernameInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label styleClass="password" text="密  码:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <PasswordField styleClass="passwordInput" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <!-- 通过HBox嵌入一个可调控位置的盒子组件-->
+        <HBox spacing="10" alignment="bottom_center" GridPane.columnIndex="1"
+              GridPane.rowIndex="4">
+            <!-- 在HBox盒子中装入一个 Button登录按钮，同时注册监听器 -->
+            <Button styleClass="btn" text="登  录:" onAction="#handleSubmitButtonAction"/>
+        </HBox>
+        <!-- 作为登录按钮的提示框  -->
+        <Text fx:id="actiontarget" GridPane.columnIndex="0"
+              GridPane.columnSpan="2" GridPane.halignment="RIGHT"
+              GridPane.rowIndex="6"/>
+
+    </GridPane>
+
+</VBox>
