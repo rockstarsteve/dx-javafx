@@ -16,13 +16,12 @@ import java.io.IOException;
  * @copyright Copyright (c) 电信
  * @since 2022/8/10
  */
-public class App05Button extends Application {
+public class Button extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App05Button.class.getResource("/fxml/Buttom.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Button.class.getResource("/fxml/Buttom.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 700);
-        scene.getStylesheets().add(getClass().getResource("/css/common.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

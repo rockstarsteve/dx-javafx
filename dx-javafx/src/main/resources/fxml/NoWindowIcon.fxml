@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox fx:id="loginForm" xmlns:fx="http://javafx.com/fxml" fx:controller="com.dx.controller.NoWindowIconTestController">
+
+    <children>
+        <Button text="登录" fx:id="loginBtn" onAction="#click"></Button>
+    </children>
+
+
+</VBox>

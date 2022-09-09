@@ -23,6 +23,7 @@ import java.util.function.BiConsumer;
 
 /**
  * Description:
+ * 测试toastfx的弹出内容扩展
  *
  * @author rockstarsteve
  * @version 1.0

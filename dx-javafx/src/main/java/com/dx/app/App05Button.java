@@ -24,6 +24,10 @@ public class App05Button extends Application {
         VBox root = new VBox();
 
         Button btn = new Button("登录");
+        btn.setOnAction(actionEvent -> {
+            System.out.println("actionEvent:" + actionEvent);
+        });
+
         root.getChildren().add(btn);
 
         Scene scene = new Scene(root, 600, 600);

@@ -30,7 +30,7 @@ import java.util.Optional;
  * @copyright Copyright (c) 电信
  * @since 2022/8/24
  */
-public class LoginTrayTest extends Application {
+public class NoWindowIconTest extends Application {
 
     private static Stage stage;
     private static SystemTray systemTray;
@@ -51,7 +51,7 @@ public class LoginTrayTest extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         //设置图标
-        stage.getIcons().add(new Image(LoginTrayTest.class.getResourceAsStream("/images/icon.png")));
+        stage.getIcons().add(new Image(NoWindowIconTest.class.getResourceAsStream("/images/icon.png")));
         initStage(stage);
         stage.show();
 
@@ -98,7 +98,7 @@ public class LoginTrayTest extends Application {
      * @throws IOException
      */
     private TrayIcon getTrayIcon(SystemTray systemTray) throws IOException {
-        BufferedImage read = ImageIO.read(Objects.requireNonNull(LoginTrayTest.class.getResourceAsStream("/images/icon.png")));
+        BufferedImage read = ImageIO.read(Objects.requireNonNull(NoWindowIconTest.class.getResourceAsStream("/images/icon.png")));
         TrayIcon newTrayIcon = new TrayIcon(read, "测试程序");
         newTrayIcon.setImageAutoSize(true);
 
@@ -107,7 +107,7 @@ public class LoginTrayTest extends Application {
             public void mouseClicked(MouseEvent e) {
                 //点击左键 弹出主界面
                 if (e.getButton() == MouseEvent.BUTTON1) {
-                    Platform.runLater(() -> showPrimaryStage(LoginTrayTest.stage));
+                    Platform.runLater(() -> showPrimaryStage(NoWindowIconTest.stage));
                 }
                 //鼠标右键
                 if (e.getButton() == MouseEvent.BUTTON3) {
