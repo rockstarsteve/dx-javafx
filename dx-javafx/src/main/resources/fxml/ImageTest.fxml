@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
-<TilePane styleClass="main" xmlns:fx="http://javafx.com/fxml" stylesheets="@../css/loginTest.css">
+<TilePane styleClass="main" xmlns:fx="http://javafx.com/fxml">
 
     <VBox styleClass="box1"></VBox>
     <Button prefHeight="200" prefWidth="200" style="-fx-background-color: #fff;-fx-padding: 0;-fx-background-insets: 0">

@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 /**
  * Description:
  *
+ *
  * @author rockstarsteve
  * @version 1.0
  * @copyright Copyright (c) 电信
@@ -20,6 +21,7 @@ public class App36BorderPane extends Application {
     public void start(Stage stage) {
         //Instantiating the BorderPane class
         BorderPane bPane = new BorderPane();
+//        bPane.setStyle("");
 
         //Setting the top, bottom, center, right and left nodes to the pane
         bPane.setTop(new TextField("Top"));
