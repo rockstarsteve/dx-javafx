@@ -11,10 +11,13 @@
     -fx-translate-x: 50;
     -fx-translate-y: 50;
 
+
+
 }
 
 .srcoll-box{
     -fx-background-color: pink;
+    -fx-hbar-policy: never;
 }
 
 .scroll-box-content{

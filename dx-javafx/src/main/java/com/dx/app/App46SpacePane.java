@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 /**
  * Description:
- *  设置每个元素的间隙
+ *  设置每个元素的间隙/间距
  *
  * @author rockstarsteve
  * @version 1.0
@@ -26,8 +26,7 @@ public class App46SpacePane extends Application {
         Button button4 = new Button("Button4");
 
         VBox flowPane = new VBox();
-//        flowPane.setHgap(25);
-//        flowPane.setMargin(button1, new Insets(20, 0, 20, 20));
+        //这里是这个容器里面元素的间隙/间距的
         flowPane.setSpacing(20);
         ObservableList list = flowPane.getChildren();
         list.addAll(button1, button2, button3, button4);

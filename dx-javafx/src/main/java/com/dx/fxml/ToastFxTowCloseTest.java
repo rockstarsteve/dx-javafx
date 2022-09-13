@@ -24,6 +24,7 @@ import java.util.function.BiConsumer;
 /**
  * Description:
  * 测试toastfx的弹出内容扩展
+ * 测试根据点击的按钮获取id值
  *
  * @author rockstarsteve
  * @version 1.0

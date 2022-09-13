@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * Description:
+ * 滚动条
  *
  * @author rockstarsteve
  * @version 1.0
