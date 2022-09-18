@@ -3,6 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <groupId>com.dx</groupId>
     <artifactId>dx-javafx-spring</artifactId>
@@ -11,23 +17,21 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javafx.maven.plugin.version>0.0.6</javafx.maven.plugin.version>
+        <javafx.version>11</javafx.version>
     </properties>
 
-    <dependencies>
 
+    <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.4.5</version>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -43,48 +47,88 @@
             <artifactId>bootstrapfx-core</artifactId>
             <version>0.4.0</version>
         </dependency>
-
-
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>4.7.2</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
     <build>
         <plugins>
+            <!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+            -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.7</version>
-                <executions>
-                    <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
-                        <id>default-cli</id>
-                        <configuration>
-                            <mainClass>com.dx.dxjavafx2/com.dx.AppCode</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
+                <version>${javafx.maven.plugin.version}</version>
+                <configuration>
+                    <mainClass>com.dx.DxBootStudyApplication</mainClass>
+                </configuration>
             </plugin>
+
+            <!--linux下的打包-->
+            <!--
+            <plugin>
+                 <groupId>io.github.fvarrui</groupId>
+                 <artifactId>javapackager</artifactId>
+                 <version>1.6.2</version>
+                 <executions>
+                     <execution>
+                         <id>bundling-for-linux</id>
+                         <phase>package</phase>
+                         <goals>
+                             <goal>package</goal>
+                         </goals>
+                         <configuration>
+                             <platform>linux</platform>
+                             <createTarball>false</createTarball>
+                             <name>dxJavafxSpring</name>
+                             <displayName>dxJavafxSpring</displayName>
+                             <mainClass>com.dx.DxBootStudyApplication</mainClass>
+                             <version>1.0-SNAPSHOT</version>
+                             <bundleJre>true</bundleJre>
+                             <jrePath>D:\ide\java\jdk-11\jre</jrePath>
+                             &lt;!&ndash;项目的resources目录的绝对路径 ，涉及到 应用程序的图标和 构建模板&ndash;&gt;
+                             <assetsDir>D:\project\dx-javafx\dx-javafx-spring\src\main\resources</assetsDir>
+                             &lt;!&ndash;指定maven打包后 生成的模板文件和 不用进行安装的应用程序的 路径&ndash;&gt;
+                             <outputDirectory>D:\project\dx-javafx\dx-javafx-spring\linux</outputDirectory>
+                             <linuxConfig>
+                                 <pngFile>D:\project\dx-javafx\dx-javafx-spring\src\main\resources\images\SeNT-Node.png
+                                 </pngFile>
+                                 <generateDeb>false</generateDeb>
+                                 <generateRpm>false</generateRpm>
+                             </linuxConfig>
+                         </configuration>
+                     </execution>
+                 </executions>
+             </plugin>
+             -->
         </plugins>
     </build>
+
 </project>

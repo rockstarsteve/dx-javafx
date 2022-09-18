@@ -62,7 +62,8 @@ public class LoginTrayTestController implements Initializable {
             public void onSuccessful(Call call, String data) throws JsonProcessingException {
                 System.out.println("成功返回的参数是：" + data);
                 RespToken respToken = objectMapper.readValue(data, RespToken.class);
-                ApplicatonStore.setToken(respToken.getToken());
+                //dsh
+//                ApplicatonStore.setToken(respToken.getToken());
             }
 
             @Override

@@ -14,10 +14,12 @@
     <artifactId>dx-javafx</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>dx-javafx</name>
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.7.1</junit.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -94,24 +96,55 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
+                    <release>11</release>
                     <source>11</source>
                     <target>11</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.7</version>
+
+            <!--<plugin>
+                <groupId>io.github.fvarrui</groupId>
+                <artifactId>javapackager</artifactId>
+                <version>1.6.6</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
-                        <id>default-cli</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
                         <configuration>
-                            <mainClass>com.dx.dxjavafx2/com.dx.AppCode</mainClass>
+                            &lt;!&ndash; 启动类 &ndash;&gt;
+                            <mainClass>com.dx.fxml.LoginTrayTest</mainClass>
+                            &lt;!&ndash; 绑定自定义JRE路径&ndash;&gt;
+                            <bundleJre>true</bundleJre>
+                            <jrePath>D:\ide\java\jdk-11\jre</jrePath>
+                            <generateInstaller>true</generateInstaller>
+                            <administratorRequired>false</administratorRequired>
+                            &lt;!&ndash; 操作系统&ndash;&gt;
+                            <platform>windows</platform>
+                            <copyDependencies>true</copyDependencies>
+                            &lt;!&ndash; 名称与版本&ndash;&gt;
+                            <displayName>dxJavafx</displayName>
+                            <name>dxJavafx</name>
+                            <version>1.0</version>
+                            &lt;!&ndash; 手动引入额外资源&ndash;&gt;
+                            <additionalResources>
+                                <additionalResource>D:\project\dx-javafx\dx-javafx\src\main\resources</additionalResource>
+&lt;!&ndash;                                <additionalResource>D:\Item\GD_AmtHardwareTest1.0\lib</additionalResource>&ndash;&gt;
+                            </additionalResources>
+                            &lt;!&ndash;详细参数配置&ndash;&gt;
+                            <winConfig>
+                                <icoFile>D:\project\dx-javafx\dx-javafx\src\main\resources\images\test.ico</icoFile>
+                                <generateSetup>false</generateSetup>
+                                <generateMsi>false</generateMsi>
+                                <generateMsm>false</generateMsm>
+                            </winConfig>
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
+
+
     </build>
 </project>

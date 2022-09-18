@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--默认每隔一分钟扫描此配置文件的修改并重新加载-->
+<!-- <configuration scan="true" scanPeriod="60 seconds"> -->
+<configuration>
+
+
+    <contextListener class="com.lqy.log.listener.LogbackStartupListener"/>
+
+    <!--定义日志文件的存储地址 勿在LogBack的配置中使用相对路径-->
+    <property name="projectName" value="logback"/>
+    <property name="LOG_HOME" value="/dx/logs"/>
+    <property name="logDays" value="30"/>
+    <property name="history" value="history"/>
+    <property name="log_style" value="[%level] [%date{yyyy-MM-dd HH:mm:ss.SSS}] %thread %class.%method：%line%n%msg%n%n"/>
+
+    <!-- 读取spring配置文件的变量 -->
+    <springProperty name="springProfilesActive" source="spring.profiles.active"/>
+
+    <!-- 测试环境不在控制台输出 -->
+
+
+    <!--输出日志到文件中-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${projectName}/${weblogicName}/info.log</file>
+        <!--不输出ERROR级别的日志-->
+        <!--
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+         -->
+
+        <!--根据日期滚动输出日志策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${projectName}/${weblogicName}/${history}/%d{yyyy-MM-dd}-info.log</fileNamePattern>
+            <!--日志保留天数-->
+            <maxHistory>${logDays}</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>[${springProfilesActive}]${log_style}</pattern>
+        </encoder>
+
+    </appender>
+
+
+    <!--警告日志输出文件-->
+    <appender name="WARN_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${projectName}/${weblogicName}/warn.log</file>
+        <!--只输出ERROR级别的日志-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+        <!--根据日期滚动输出日志策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${projectName}/${weblogicName}/${history}/%d{yyyy-MM-dd}-warn.log</fileNamePattern>
+            <!--日志保留天数-->
+            <maxHistory>${logDays}</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>[${springProfilesActive}]${log_style}</pattern>
+        </encoder>
+
+    </appender>
+
+
+    <!--错误日志输出文件-->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/${projectName}/${weblogicName}/error.log</file>
+        <!--只输出ERROR级别的日志-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+        <!--根据日期滚动输出日志策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${projectName}/${weblogicName}/${history}/%d{yyyy-MM-dd}-error.log</fileNamePattern>
+            <!--日志保留天数-->
+            <maxHistory>${logDays}</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>[${springProfilesActive}]${log_style}</pattern>
+        </encoder>
+
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="WARN_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+
+</configuration>
